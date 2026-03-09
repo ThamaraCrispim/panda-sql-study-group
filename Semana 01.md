@@ -1,7 +1,6 @@
 ##  Semana 1 — Introdução e Ambiente
 
 ### Estudo
-
 **SQL (Structured Query Language)** é uma linguagem utilizada para **consultar, manipular e gerenciar dados armazenados em bancos de dados relacionais**.
 
 Os **bancos de dados relacionais** organizam as informações em **tabelas**, compostas por **linhas (registros)** e **colunas (atributos)**. Essas tabelas podem se relacionar entre si por meio de **chaves**, permitindo conectar diferentes informações, como clientes, pedidos e produtos.

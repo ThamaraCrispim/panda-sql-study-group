@@ -1,4 +1,4 @@
-# 🗓 Cronograma de Estudos — SQL
+# Cronograma de Estudos — SQL
 
 O cronograma do grupo foi estruturado em **12 semanas de estudo**, combinando teoria e prática utilizando o dataset **Brazilian E-Commerce Public Dataset by Olist**.
 

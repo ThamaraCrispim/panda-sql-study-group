@@ -15,5 +15,5 @@ O primeiro comando geralmente aprendido em SQL é o **`SELECT`**, que é utiliza
 Exemplo de consulta básica:
 
 ```sql
-SELECT * FROM nome_da_tabela;
+SELECT * FROM nome_da_tabela
 ```

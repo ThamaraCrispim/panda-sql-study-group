@@ -19,4 +19,6 @@ SELECT * FROM olist_products_dataset
 ```
 Resultando:
 
-![Resultado da Query](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/semana%20.png
+Resultado:
+
+![Resultado da Consulta](Imagem/semana01.png)

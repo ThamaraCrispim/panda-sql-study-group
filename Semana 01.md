@@ -15,5 +15,8 @@ O primeiro comando geralmente aprendido em SQL é o **`SELECT`**, que é utiliza
 Exemplo de consulta básica:
 
 ```sql
-SELECT * FROM nome_da_tabela
+SELECT * FROM olist_products_dataset
 ```
+Resultando:
+
+![Resultado da Query](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/semana%20.png

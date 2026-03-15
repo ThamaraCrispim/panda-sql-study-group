@@ -19,6 +19,5 @@ SELECT * FROM olist_products_dataset
 ```
 Resultando:
 
-Resultado:
+![Descrição da tabela employees](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/semana%20.png)
 
-![Resultado da Consulta](Imagem/semana01.png)

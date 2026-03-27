@@ -1,4 +1,4 @@
-# Semana 2 – Consultas Básicas e Filtragem
+## Semana 2 – Consultas Básicas e Filtragem
 
  O que estudar:
 - SELECT, FROM, AS (alias)

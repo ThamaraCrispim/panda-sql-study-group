@@ -150,8 +150,14 @@ WHERE coluna BETWEEN valor1 AND valor2
 
 Utilizando o dataset **Brazilian E-Commerce Public Dataset by Olist**, realize as seguintes consultas:
 
-- Filtrar clientes por estado
+### Filtrar clientes por estado
 
+```sql
+SELECT *
+FROM olist_geolocation_dataset
+WHERE geolocation_state IN ('SP', 'RJ');
+
+```
 
 - Buscar produtos de uma categoria específica
 - Filtrar pedidos entre dois valores ou datas

@@ -151,6 +151,8 @@ WHERE coluna BETWEEN valor1 AND valor2
 Utilizando o dataset **Brazilian E-Commerce Public Dataset by Olist**, realize as seguintes consultas:
 
 - Filtrar clientes por estado
+
+
 - Buscar produtos de uma categoria específica
 - Filtrar pedidos entre dois valores ou datas
 - Encontrar padrões em nomes de cidades ou categorias

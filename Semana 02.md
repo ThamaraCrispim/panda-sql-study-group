@@ -150,7 +150,7 @@ WHERE coluna BETWEEN valor1 AND valor2
 
 Utilizando o dataset **Brazilian E-Commerce Public Dataset by Olist**, realize as seguintes consultas:
 
-### Filtrar clientes por estado
+### 1 - Filtrar clientes por estado
 
 ```sql
 SELECT *
@@ -165,7 +165,7 @@ A consulta retorna todos os registros onde o estado é SP ou RJ.
 
 ![Resultado filtro estado](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/Semana02P1.png)
 
-### Buscar produtos de uma categoria específica
+### 2 - Buscar produtos de uma categoria específica
 
 ```sql
 Select product_id,

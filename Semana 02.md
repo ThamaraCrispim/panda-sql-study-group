@@ -183,9 +183,15 @@ A consulta retorna todos os produtos das categorias bebes e artes.
 ### 3 - Filtrar pedidos entre dois valores ou datas
 
 ```sql
-Select p*
+SELECT *
+FROM olist_orders_dataset
+WHERE order_purchase_timestamp BETWEEN '2017-01-01' AND '2017-12-31';
 ```
 
 Resultado:
+
+A consulta permite visualizar os pedidos realizados dentro de um intervalo de tempo específico, possibilitando analisar o volume de compras ao longo do período.
+
+![Resultado filtro estado](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/Quest%C3%A3o%203.png)
 
 ### 4 - Encontrar padrões em nomes de cidades ou categorias

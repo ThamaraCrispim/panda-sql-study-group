@@ -180,5 +180,12 @@ A consulta retorna todos os produtos das categorias bebes e artes.
 
 ![Resultado filtro estado](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/Quest%C3%A3o%202.png)
 
-- Filtrar pedidos entre dois valores ou datas
-- Encontrar padrões em nomes de cidades ou categorias
+### 3 - Filtrar pedidos entre dois valores ou datas
+
+```sql
+Select p*
+```
+
+Resultado:
+
+### 4 - Encontrar padrões em nomes de cidades ou categorias

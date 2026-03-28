@@ -107,4 +107,10 @@ FROM tabela;
 ## Prática
 
 Utilizando o dataset **Brazilian E-Commerce Public Dataset by Olist**, realize as seguintes consultas:
+### 1 - Ordenar pedidos do mais recente para o mais antigo
+### 2 - Listar apenas uma quantidade limitada de registros
+### 3 - Pular um conjunto de registros e retornar os próximos
+### 4 - Identificar colunas que possuem valores nulos
+### 5 - Substituir valores nulos por valores padrão
+
 

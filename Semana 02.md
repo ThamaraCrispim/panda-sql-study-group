@@ -195,3 +195,15 @@ A consulta permite visualizar os pedidos realizados dentro de um intervalo de te
 ![Resultado filtro estado](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/Quest%C3%A3o%203.png)
 
 ### 4 - Encontrar padrões em nomes de cidades ou categorias
+
+```sql
+SELECT *
+FROM olist_products_dataset
+WHERE product_category_name LIKE 'i%';
+```
+
+Resultado:
+
+Esta consulta retorna todos os produtos cuja categoria começa com a letra "i".
+
+![Resultado filtro estado](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/quest%C3%A3o%204.png)

@@ -165,6 +165,19 @@ A consulta retorna todos os registros onde o estado é SP ou RJ.
 
 ![Resultado filtro estado](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/Semana02P1.png)
 
-- Buscar produtos de uma categoria específica
+### Buscar produtos de uma categoria específica
+
+```sql
+Select * 
+from olist_products_dataset
+where product_category_name in('bebes','artes')
+```
+
+esultado:
+
+A consulta retorna todos os produtos das categorias bebes e artes.
+
+![Resultado filtro estado](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/Semana02P1.png)
+
 - Filtrar pedidos entre dois valores ou datas
 - Encontrar padrões em nomes de cidades ou categorias

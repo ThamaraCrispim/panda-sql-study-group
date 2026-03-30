@@ -148,4 +148,4 @@ FROM tabela;
 Utilizando o dataset **Brazilian E-Commerce Public Dataset by Olist**, realize as seguintes consultas:
 
 
-Essas funções são fundamentais para limpeza, transformação e análise de dados no dia a dia.
+Essas funções são fundamentais para limpeza, transformação e análise de dados no dia a dia

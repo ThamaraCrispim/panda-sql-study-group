@@ -168,4 +168,15 @@ Como a consulta não retornou resultados, podemos afirmar que não existem valor
 
 ### 5 - Substituir valores nulos por valores padrão
 
+```sql
+SELECT *
+FROM olist_products_dataset
+WHERE product_photos_qty IS NULL;
+```
+
+Resultado:
+
+A análise mostra que a quantidade total de registros é igual à quantidade de valores não nulos, indicando que não existem valores nulos na coluna product_category_name.
+
+![Resultado semana 03P1](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/semana%2003%20parte%205.png)
 

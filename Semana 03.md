@@ -108,6 +108,19 @@ FROM tabela;
 
 Utilizando o dataset **Brazilian E-Commerce Public Dataset by Olist**, realize as seguintes consultas:
 ### 1 - Ordenar pedidos do mais recente para o mais antigo
+
+```sql
+SELECT order_id, order_purchase_timestamp
+FROM olist_orders_dataset
+order by order_purchase_timestamp desc
+```
+
+Resultado:
+
+A consulta retorna os pedidos ordenados do mais recente para o mais antigo, permitindo analisar o comportamento de compras ao longo do tempo.
+
+![Resultado semana 03](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/semana%2003%20parte%201.png)
+
 ### 2 - Listar apenas uma quantidade limitada de registros
 ### 3 - Pular um conjunto de registros e retornar os próximos
 ### 4 - Identificar colunas que possuem valores nulos

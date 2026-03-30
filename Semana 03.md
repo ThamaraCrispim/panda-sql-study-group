@@ -122,6 +122,21 @@ A consulta retorna os pedidos ordenados do mais recente para o mais antigo, perm
 ![Resultado semana 03](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/semana%2003%20parte%201.png)
 
 ### 2 - Listar apenas uma quantidade limitada de registros
+
+
+```sql
+Select * 
+from olist_customers_dataset
+order by customer_zip_code_prefix desc
+limit 10
+```
+
+Resultado:
+
+A consulta ordena os clientes pelo código de CEP em ordem decrescente e retorna apenas os 10 primeiros registros, utilizando ORDER BY e LIMIT para restringir e organizar os dados.
+
+![Resultado semana 03P1](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/Semana%2003%20parte%202.png)
+
 ### 3 - Pular um conjunto de registros e retornar os próximos
 ### 4 - Identificar colunas que possuem valores nulos
 ### 5 - Substituir valores nulos por valores padrão

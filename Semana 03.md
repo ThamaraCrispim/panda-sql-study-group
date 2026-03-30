@@ -138,6 +138,19 @@ A consulta ordena os clientes pelo código de CEP em ordem decrescente e retorna
 ![Resultado semana 03P1](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/Semana%2003%20parte%202.png)
 
 ### 3 - Pular um conjunto de registros e retornar os próximos
+
+
+```sql
+SELECT *
+FROM olist_customers_dataset
+limit 10 offset 5
+```
+
+Resultado:
+
+![Resultado semana 03P1](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/semana%2003%20parte%203..png)
+
+
 ### 4 - Identificar colunas que possuem valores nulos
 ### 5 - Substituir valores nulos por valores padrão
 

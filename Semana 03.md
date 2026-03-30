@@ -152,6 +152,20 @@ Resultado:
 
 
 ### 4 - Identificar colunas que possuem valores nulos
+
+
+```sql
+SELECT *
+FROM olist_products_dataset
+WHERE product_photos_qty IS NULL;
+```
+
+Resultado:
+
+Como a consulta não retornou resultados, podemos afirmar que não existem valores nulos nessa coluna.
+
+![Resultado semana 03P1](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/semana%2003%20parte%204.png)
+
 ### 5 - Substituir valores nulos por valores padrão
 
 

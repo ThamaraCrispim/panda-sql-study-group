@@ -140,6 +140,15 @@ Utilizando o dataset **Brazilian E-Commerce Public Dataset by Olist**, realize a
 
 ## 1 - Padronizar nomes de cidades ou categorias
 
+```sql
+SELECT
+
+```
+Resultado:
+
+
+![Resultado filtro estado]()
+
 ## 2 - Calcular ano ou mês das compras
 
 ## 3 - Calcular diferenças entre datas de pedido e entrega

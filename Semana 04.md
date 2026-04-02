@@ -134,18 +134,14 @@ FROM tabela;
 
 ---
 
-## ⚠️ Cuidados importantes
-
-- Funções podem variar dependendo do banco (PostgreSQL, MySQL, etc.)
-- Sempre verifique o tipo da coluna antes de usar funções
-- `CAST` é essencial para evitar erros de tipo
-- Funções podem impactar performance em grandes volumes
-
----
-
 ## Prática
 
 Utilizando o dataset **Brazilian E-Commerce Public Dataset by Olist**, realize as seguintes consultas:
 
+## 1 - Padronizar nomes de cidades ou categorias
 
-Essas funções são fundamentais para limpeza, transformação e análise de dados no dia a dia
+## 2 - Calcular ano ou mês das compras
+
+## 3 - Calcular diferenças entre datas de pedido e entrega
+
+## 4 - Arredondar valores de pagamento

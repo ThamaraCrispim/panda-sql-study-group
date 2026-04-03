@@ -146,12 +146,24 @@ upper(geolocation_city) as cidade_padronizada
 from olist_geolocation_dataset;
 ```
 
-Resultado:
+Resultado: Após executar o comando, os nomes das cidades foram padronizados, passando a seguir o mesmo padrão de escrita.
 
 
 ![Resultado cidade padronizada estado](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/Semana%2004.png)
 
 ## 2 - Calcular ano ou mês das compras
+
+```sql
+SELECT 
+  payment_value,
+  ABS(payment_value - 100) AS diferenca
+FROM olist_order_payments_dataset
+ORDER BY diferenca DESC;
+```
+
+Resultado: A função ABS foi utilizada para garantir valores positivos. No entanto, como a base não possui valores negativos, não houve alteração nos resultados. Para tornar a análise mais relevante, foi aplicada a função para medir a diferença entre os valores de pagamento e um valor de referência.
+
+![Resultado cidade padronizada estado](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/semana%2004.P1.png)
 
 ## 3 - Calcular diferenças entre datas de pedido e entrega
 

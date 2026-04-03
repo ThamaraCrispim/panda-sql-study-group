@@ -141,13 +141,15 @@ Utilizando o dataset **Brazilian E-Commerce Public Dataset by Olist**, realize a
 ## 1 - Padronizar nomes de cidades ou categorias
 
 ```sql
-SELECT
-
+select geolocation_city,
+upper(geolocation_city) as cidade_padronizada
+from olist_geolocation_dataset;
 ```
+
 Resultado:
 
 
-![Resultado filtro estado]()
+![Resultado cidade padronizada estado](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/Semana%2004.png)
 
 ## 2 - Calcular ano ou mês das compras
 

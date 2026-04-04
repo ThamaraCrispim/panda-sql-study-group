@@ -182,3 +182,14 @@ Resultado: A consulta calcula a diferença entre a data de compra e a data de en
 
 
 ## 4 - Arredondar valores de pagamento
+
+```sql
+SELECT 
+  payment_value,
+  ROUND(payment_value, 2) AS valor_arredondado
+FROM olist_order_payments_dataset;
+```
+
+Resultado: 
+
+![Resultado cidade padronizada estado](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/semana%2004.P3.png)

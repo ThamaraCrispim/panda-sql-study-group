@@ -167,4 +167,18 @@ Resultado: A função ABS foi utilizada para garantir valores positivos. No enta
 
 ## 3 - Calcular diferenças entre datas de pedido e entrega
 
+```sql
+SELECT 
+  order_purchase_timestamp,
+  order_delivered_customer_date,
+  DATEDIFF(order_delivered_customer_date, order_purchase_timestamp) AS dias_entrega
+FROM olist_orders_dataset
+WHERE order_delivered_customer_date IS NOT NULL;
+```
+
+Resultado: A consulta calcula a diferença entre a data de compra e a data de entrega utilizando a função DATEDIFF, permitindo analisar o tempo de entrega dos pedidos. Foram considerados apenas pedidos com data de entrega válida.
+
+![Resultado cidade padronizada estado](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/semana%2004.P2.png)
+
+
 ## 4 - Arredondar valores de pagamento

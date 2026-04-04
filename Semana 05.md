@@ -109,12 +109,12 @@ HAVING COUNT(*) > valor;
 
 ## Prática
 
-##1.Contar quantos pedidos existem no banco
+## 1.Contar quantos pedidos existem no banco
 
-##2.Calcular quantidade de clientes por estado
+## 2.Calcular quantidade de clientes por estado
 
-##3.Calcular média de valor de pagamento
+## 3.Calcular média de valor de pagamento
 
-##4.Identificar categorias com maior número de produtos
+## 4.Identificar categorias com maior número de produtos
 
 ##5.Filtrar agrupamentos com base em condições específicas

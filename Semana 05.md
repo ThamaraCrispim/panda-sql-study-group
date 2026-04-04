@@ -117,4 +117,4 @@ HAVING COUNT(*) > valor;
 
 ## 4.Identificar categorias com maior número de produtos
 
-##5.Filtrar agrupamentos com base em condições específicas
+## 5.Filtrar agrupamentos com base em condições específicas

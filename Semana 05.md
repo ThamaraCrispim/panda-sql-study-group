@@ -104,15 +104,17 @@ HAVING COUNT(*) > valor;
 
 👉 Filtra grupos com base em condições agregadas
 
----
-
-## ⚠️ Cuidados importantes
-
-- Toda coluna no SELECT deve estar no GROUP BY ou em uma função de agregação
-- `WHERE` não funciona com funções agregadas (use HAVING)
-- `HAVING` é executado depois do GROUP BY
-- Evite confundir filtros de linha com filtros de grupo
 
 ---
 
 ## Prática
+
+##1.Contar quantos pedidos existem no banco
+
+##2.Calcular quantidade de clientes por estado
+
+##3.Calcular média de valor de pagamento
+
+##4.Identificar categorias com maior número de produtos
+
+##5.Filtrar agrupamentos com base em condições específicas

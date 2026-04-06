@@ -109,6 +109,16 @@ HAVING COUNT(*) > valor;
 
 ## 1.Contar quantos pedidos existem no banco
 
+```sql
+SELECT COUNT(*) AS total_pedidos
+FROM olist_orders_dataset;
+```
+
+Resultado:Essa métrica representa o volume total de pedidos realizados, sendo um indicador importante para análise do negócio.
+
+![Resultado semana 05](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/semana%2005.png)
+
+
 ## 2.Calcular quantidade de clientes por estado
 
 ## 3.Calcular média de valor de pagamento

@@ -121,6 +121,20 @@ Resultado:Essa métrica representa o volume total de pedidos realizados, sendo u
 
 ## 2.Calcular quantidade de clientes por estado
 
+
+```sql
+SELECT 
+  geolocation_state,
+  COUNT(*) AS total_registros
+FROM olist_geolocation_dataset
+GROUP BY geolocation_state
+ORDER BY total_registros DESC;
+```
+
+Resultado:A consulta agrupa os dados por estado utilizando GROUP BY e conta a quantidade de registros em cada um com a função COUNT, permitindo analisar a distribuição geográfica dos dados.
+
+![Resultado semana 05.P1](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/Semana%2005.P1.png)
+
 ## 3.Calcular média de valor de pagamento
 
 ## 4.Identificar categorias com maior número de produtos

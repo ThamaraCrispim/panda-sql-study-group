@@ -102,8 +102,6 @@ GROUP BY coluna
 HAVING COUNT(*) > valor;
 ```
 
-👉 Filtra grupos com base em condições agregadas
-
 
 ---
 

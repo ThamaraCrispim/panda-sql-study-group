@@ -139,13 +139,13 @@ Resultado:A consulta agrupa os dados por estado utilizando GROUP BY e conta a qu
 
 
 ```sql
-SELECT 
-
+SELECT AVG(payment_value) AS media_pagamento
+FROM olist_order_payments_dataset;
 ```
 
-Resultado:
+Resultado: A função AVG foi utilizada para calcular a média dos valores de pagamento, permitindo analisar o valor médio das transações no conjunto de dados.
 
-![Resultado semana 05.P1]()
+![Resultado semana 05.P1](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/Semana%2005.%20P2.png)
 
 ## 4.Identificar categorias com maior número de produtos
 

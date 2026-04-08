@@ -137,6 +137,16 @@ Resultado:A consulta agrupa os dados por estado utilizando GROUP BY e conta a qu
 
 ## 3.Calcular média de valor de pagamento
 
+
+```sql
+SELECT 
+
+```
+
+Resultado:
+
+![Resultado semana 05.P1]()
+
 ## 4.Identificar categorias com maior número de produtos
 
 ## 5.Filtrar agrupamentos com base em condições específicas

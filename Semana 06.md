@@ -64,13 +64,20 @@ ON tabela1.coluna = tabela2.coluna;
 
 ---
 
-## ⚠️ Cuidados importantes
 
-- Sempre use o `ON` para definir a relação entre as tabelas  
-- Verifique se as colunas têm o mesmo tipo  
-- INNER JOIN remove dados sem correspondência  
-- LEFT JOIN mantém todos os dados da tabela principal  
+## Prática
 
----
+Utilizando o dataset **Brazilian E-Commerce Public Dataset by Olist**, realize as seguintes consultas:
+
+## 1 - Relacionar clientes com seus pedidos
+
+
+## 2 - Relacionar pedidos com informações de pagamento
+
+## 3 - Identificar pedidos que possuem clientes cadastrados
+
+
+## 4 - Listar todos os clientes, incluindo aqueles que não possuem pedidos
+
 
 ## Prática

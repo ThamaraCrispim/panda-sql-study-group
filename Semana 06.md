@@ -79,5 +79,3 @@ Utilizando o dataset **Brazilian E-Commerce Public Dataset by Olist**, realize a
 
 ## 4 - Listar todos os clientes, incluindo aqueles que não possuem pedidos
 
-
-## Prática

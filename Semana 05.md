@@ -149,4 +149,33 @@ Resultado: A função AVG foi utilizada para calcular a média dos valores de pa
 
 ## 4.Identificar categorias com maior número de produtos
 
+```sql
+SELECT 
+  product_category_name,
+  COUNT(*) AS total_produtos
+FROM olist_products_dataset
+GROUP BY product_category_name
+ORDER BY total_produtos DESC;
+```
+
+Resultado: A consulta agrupa os produtos por categoria utilizando GROUP BY e calcula a quantidade de produtos em cada uma com a função COUNT, permitindo identificar quais categorias possuem maior volume.
+
+![Resultado semana 05.P1](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/semana%2005%20P3.png)
+
 ## 5.Filtrar agrupamentos com base em condições específicas
+
+
+```sql
+SELECT 
+  product_category_name,
+  COUNT(*) AS total_produtos
+FROM olist_products_dataset
+WHERE product_category_name IS NOT NULL
+GROUP BY product_category_name
+HAVING COUNT(*) > 100
+ORDER BY total_produtos DESC;
+```
+
+Resultado: A cláusula HAVING foi utilizada para filtrar os resultados após o agrupamento, permitindo selecionar apenas grupos que atendem a uma condição específica, como categorias com grande quantidade de produtos.
+
+![Resultado semana 05.P1](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/Semana%2005%20P4.png)

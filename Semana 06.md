@@ -71,6 +71,23 @@ Utilizando o dataset **Brazilian E-Commerce Public Dataset by Olist**, realize a
 
 ## 1 - Relacionar clientes com seus pedidos
 
+```sql
+SELECT 
+    c.customer_id,
+    c.customer_city,
+    c.customer_state,
+    o.order_id,
+    o.order_status,
+    o.order_purchase_timestamp
+FROM olist_customers_dataset c
+INNER JOIN olist_orders_dataset o
+    ON c.customer_id = o.customer_id;
+```
+
+Resultado: Após executar o comando, os nomes das cidades foram padronizados, passando a seguir o mesmo padrão de escrita.
+
+
+![Resultado cidade padronizada estado](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/Semana%2006.png)
 
 ## 2 - Relacionar pedidos com informações de pagamento
 

@@ -91,6 +91,23 @@ Resultado: Após executar o comando, os nomes das cidades foram padronizados, pa
 
 ## 2 - Relacionar pedidos com informações de pagamento
 
+```sql
+SELECT 
+    o.order_id,
+    o.order_status,
+    p.payment_type,
+    p.payment_value
+FROM olist_orders_dataset o
+INNER JOIN olist_order_payments_dataset p
+    ON o.order_id = p.order_id;
+```
+
+Resultado: Resultado: a consulta retornou os pedidos relacionados às suas respectivas informações de pagamento, incluindo dados como order_id, status do pedido, tipo de pagamento e valor pago.
+
+
+![Resultado cidade padronizada estado](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/semana%206.1.png)
+
+
 ## 3 - Identificar pedidos que possuem clientes cadastrados
 
 

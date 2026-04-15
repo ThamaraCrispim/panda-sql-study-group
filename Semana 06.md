@@ -112,22 +112,19 @@ Resultado: Resultado: a consulta retornou os pedidos relacionados às suas respe
 
 ```sql
 SELECT 
+    o.customer_id,
+    o.order_status,
+    o.order_id
+FROM olist_orders_dataset o
+INNER JOIN olist_customers_dataset c
+    ON o.customer_id = c.customer_id; 
    
 ```
 
-Resultado: 
+Resultado: a consulta retornou os pedidos que possuem clientes cadastrados, trazendo informações como customer_id, order_id e o status do pedido.
 
 
-![Resultado cidade padronizada estado]()
-```sql
-SELECT 
-   
-```
-
-Resultado: 
-
-
-![Resultado cidade padronizada estado]()
+![Resultado cidade padronizada estado](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/Semana%2006%20B.png)
 
 
 ## 4 - Listar todos os clientes, incluindo aqueles que não possuem pedidos

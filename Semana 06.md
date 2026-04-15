@@ -110,6 +110,25 @@ Resultado: Resultado: a consulta retornou os pedidos relacionados às suas respe
 
 ## 3 - Identificar pedidos que possuem clientes cadastrados
 
+```sql
+SELECT 
+   
+```
+
+Resultado: 
+
+
+![Resultado cidade padronizada estado]()
+```sql
+SELECT 
+   
+```
+
+Resultado: 
+
+
+![Resultado cidade padronizada estado]()
+
 
 ## 4 - Listar todos os clientes, incluindo aqueles que não possuem pedidos
 

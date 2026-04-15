@@ -129,3 +129,19 @@ Resultado: a consulta retornou os pedidos que possuem clientes cadastrados, traz
 
 ## 4 - Listar todos os clientes, incluindo aqueles que não possuem pedidos
 
+```sql
+
+SELECT 
+    c.customer_id,
+    c.customer_city,
+    c.customer_state,
+    o.order_id
+FROM olist_customers_dataset c
+LEFT JOIN olist_orders_dataset o
+    ON c.customer_id = o.customer_id;
+```
+
+Resultado: Após executar o comando, os nomes das cidades foram padronizados, passando a seguir o mesmo padrão de escrita.
+
+
+![Resultado cidade padronizada estado](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/semana%2006.C.png)

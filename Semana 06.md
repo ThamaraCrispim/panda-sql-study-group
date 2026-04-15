@@ -11,7 +11,7 @@ Na prática, os dados raramente estão em uma única tabela. Por isso, precisamo
 
 ## Chave Primária e Estrangeira
 
-### 💡 Ideia principal
+### Ideia principal
 
 As tabelas se conectam através de **chaves**.
 
@@ -26,7 +26,7 @@ As tabelas se conectam através de **chaves**.
 - Tabela `orders`
   - `customer_id` (chave estrangeira)
 
-👉 Isso permite relacionar pedidos com clientes
+Isso permite relacionar pedidos com clientes
 
 ---
 
@@ -43,7 +43,7 @@ INNER JOIN tabela2
 ON tabela1.coluna = tabela2.coluna;
 ```
 
-👉 Retorna apenas dados que existem nas duas tabelas
+Retorna apenas dados que existem nas duas tabelas
 
 ---
 

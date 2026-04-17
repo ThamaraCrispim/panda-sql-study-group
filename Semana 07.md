@@ -7,8 +7,6 @@ Esses conceitos são úteis para:
 - Unir resultados
 - Encontrar diferenças entre conjuntos de dados
 
----
-
 ## RIGHT JOIN
 
 O `RIGHT JOIN` retorna todos os registros da tabela da direita, mesmo que não haja correspondência na tabela da esquerda.

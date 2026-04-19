@@ -135,8 +135,80 @@ Retorna diferenças entre conjuntos
 
 ##1 - Comparar resultados obtidos com diferentes tipos de JOIN
 
+```sql
+SELECT 
+    c.customer_id,
+    o.order_id
+FROM olist_customers_dataset c
+INNER JOIN olist_orders_dataset o
+    ON c.customer_id = o.customer_id; 
+  
+```
+
+![Resultado filtro estado](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/Semana%2007.1.1.png)
+
+
+```sql
+SELECT 
+    c.customer_id,
+    o.order_id
+FROM olist_customers_dataset c
+LEFT JOIN olist_orders_dataset o
+    ON c.customer_id = o.customer_id; 
+  
+```
+
+![Resultado filtro estado](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/Semana%2007.1.2.png)
+
+Resultado: O INNER JOIN retorna apenas os clientes que possuem pedidos, enquanto o LEFT JOIN retorna todos os clientes, incluindo aqueles sem pedidos (com valores NULL). 
+
 ##2 - Unir resultados de diferentes consultas de clientes
+
+```sql
+SELECT customer_id, customer_state
+FROM olist_customers_dataset
+WHERE customer_state = 'SP'
+
+UNION
+
+SELECT customer_id, customer_state
+FROM olist_customers_dataset
+WHERE customer_state = 'RJ';
+```
+
+Resultado: A consulta uniu os clientes dos estados de SP e RJ, removendo possíveis duplicidades entre os resultados.
+
+![Resultado filtro estado](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/Semana%2007.1.png)
 
 ##3 - Identificar registros presentes em uma tabela e ausentes em outra
 
+```sql
+SELECT 
+    c.customer_id
+FROM olist_customers_dataset c
+LEFT JOIN olist_orders_dataset o
+    ON c.customer_id = o.customer_id
+WHERE o.order_id IS NULL;
+```
+
+Resultado: Foram identificados os clientes que não possuem pedidos cadastrados, utilizando LEFT JOIN e filtrando os registros sem correspondência (NULL)
+
+![Resultado filtro estado](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/Semana%2007.2.png)
+
 ##4 - Encontrar produtos que nunca apareceram em pedidos
+
+```sql
+SELECT 
+    p.product_id,
+    p.product_category_name
+FROM olist_products_dataset p
+LEFT JOIN olist_order_items_dataset oi
+    ON p.product_id = oi.product_id
+WHERE oi.product_id IS NULL;
+```
+
+Resultado: A consulta retornou os produtos que nunca foram vendidos, ou seja, que não aparecem na tabela de itens de pedidos.
+
+![Resultado filtro estado](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/semana%2007.4.png)
+
+

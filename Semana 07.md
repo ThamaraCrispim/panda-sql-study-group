@@ -117,11 +117,11 @@ SELECT coluna
 FROM tabela2;
 ```
 
-👉 Retorna diferenças entre conjuntos
+Retorna diferenças entre conjuntos
 
 ---
 
-## ⚠️ Cuidados importantes
+##  Cuidados importantes
 
 - Para usar UNION, INTERSECT e EXCEPT, as consultas devem ter o mesmo número de colunas
 - Os tipos de dados devem ser compatíveis
@@ -133,4 +133,10 @@ FROM tabela2;
 
 ## Prática
 
-Esses conceitos são fundamentais para análises mais avançadas e comparação de dados em múltiplas tabelas.
+##1 - Comparar resultados obtidos com diferentes tipos de JOIN
+
+##2 - Unir resultados de diferentes consultas de clientes
+
+##3 - Identificar registros presentes em uma tabela e ausentes em outra
+
+##4 - Encontrar produtos que nunca apareceram em pedidos

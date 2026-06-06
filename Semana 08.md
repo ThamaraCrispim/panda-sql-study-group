@@ -138,8 +138,3 @@ Resultado: Foi criada uma tabela temporária contendo o total vendido por produt
 
 ![Resultado prática 3](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/Semana%2008.P3.png)
 
----
-
-## Conclusão
-
-Nesta semana aprendemos a utilizar subconsultas em diferentes situações. Utilizamos subqueries para comparar valores com médias, calcular participações percentuais e criar tabelas temporárias para análise dos dados. Esses recursos são muito importantes para consultas mais avançadas e para análises de dados em bancos relacionais.

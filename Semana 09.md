@@ -155,7 +155,3 @@ WHERE customer_id IN
 Resultado: O registro inserido para teste foi removido da tabela.
 
 ---
-
-## Conclusão
-
-Nesta semana aprendemos os principais comandos de manipulação de dados em SQL. Utilizamos INSERT para adicionar registros, UPDATE para atualizar informações e DELETE para remover dados. Também reforçamos a importância do uso do WHERE para evitar alterações indesejadas e utilizamos uma subconsulta para remover registros de forma controlada.

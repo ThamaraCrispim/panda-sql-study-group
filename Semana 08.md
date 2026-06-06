@@ -115,7 +115,7 @@ ORDER BY total_vendas DESC;
 
 Resultado: A consulta calculou o valor total vendido por produto e a participação percentual de cada produto em relação ao faturamento total.
 
-![Resultado prática 2](COLE_AQUI_SEU_PRINT)
+![Resultado prática 2]([COLE_AQUI_SEU_PRINT](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/Semana%2008%20P2.png))
 
 ---
 
@@ -137,7 +137,7 @@ ORDER BY total_vendas DESC;
 
 Resultado: Foi criada uma tabela temporária contendo o total vendido por produto. Em seguida, foram selecionados apenas os produtos com vendas superiores a R$ 1.000.
 
-![Resultado prática 3](COLE_AQUI_SEU_PRINT)
+![Resultado prática 3](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/Semana%2008.P3.png)
 
 ---
 

@@ -1,90 +1,161 @@
 # Semana 9 — Manipulação de Dados (DML)
 
-Nesta semana, vamos aprender a **modificar dados dentro do banco**, utilizando comandos de manipulação (DML).
+Nesta semana, vamos aprender sobre **DML (Data Manipulation Language)**.
 
-Esses comandos permitem:
-- Inserir novos registros
-- Atualizar informações existentes
-- Remover dados
+Os comandos DML são utilizados para manipular os dados armazenados em uma tabela.
+
+Até agora utilizamos principalmente consultas para visualizar informações. Nesta semana vamos aprender como inserir, atualizar e remover registros.
+
+Os principais comandos são:
+
+* INSERT
+* UPDATE
+* DELETE
+
+Esses comandos são muito utilizados em sistemas de cadastro, e-commerce, bancos, aplicativos e qualquer sistema que precise armazenar informações.
 
 ---
 
-## INSERT (Inserção de dados)
+## INSERT
 
 O comando `INSERT` é utilizado para adicionar novos registros em uma tabela.
 
-### Estrutura básica:
+### Exemplo
 
 ```sql
-INSERT INTO tabela (coluna1, coluna2)
-VALUES (valor1, valor2);
+INSERT INTO clientes (
+    customer_id,
+    customer_city,
+    customer_state
+)
+VALUES (
+    'C001',
+    'São Carlos',
+    'SP'
+);
 ```
+
+Resultado: Um novo cliente é inserido na tabela.
 
 ---
 
-### Inserindo múltiplos registros:
+## UPDATE
+
+O comando `UPDATE` é utilizado para alterar informações já existentes.
+
+### Exemplo
 
 ```sql
-INSERT INTO tabela (coluna1, coluna2)
-VALUES 
-(valor1, valor2),
-(valor3, valor4);
+UPDATE clientes
+SET customer_city = 'Araraquara'
+WHERE customer_id = 'C001';
 ```
+
+Resultado: A cidade do cliente foi atualizada.
 
 ---
 
-### Inserindo a partir de outra tabela:
+## DELETE
+
+O comando `DELETE` é utilizado para remover registros.
+
+### Exemplo
 
 ```sql
-INSERT INTO tabela_destino
-SELECT *
-FROM tabela_origem;
+DELETE FROM clientes
+WHERE customer_id = 'C001';
 ```
+
+Resultado: O cliente foi removido da tabela.
 
 ---
 
-## UPDATE (Atualização de dados)
+## Cuidados importantes
 
-O comando `UPDATE` é utilizado para modificar dados existentes.
+⚠️ Sempre utilize `WHERE` em comandos UPDATE e DELETE.
 
-### Estrutura:
+Sem o WHERE, todos os registros da tabela podem ser alterados ou removidos.
+
+Exemplo perigoso:
 
 ```sql
-UPDATE tabela
-SET coluna = valor
-WHERE condição;
+DELETE FROM clientes;
 ```
 
-👉 Atualiza apenas os registros que atendem à condição
+Esse comando remove todos os registros da tabela.
 
 ---
 
-## DELETE (Remoção de dados)
+# Prática
 
-O comando `DELETE` é utilizado para remover registros de uma tabela.
-
-### Estrutura:
+## 1 - Criar uma tabela de testes baseada em dados do banco Olist
 
 ```sql
-DELETE FROM tabela
-WHERE condição;
+CREATE TABLE clientes_teste AS
+SELECT
+    customer_id,
+    customer_city,
+    customer_state
+FROM olist_customers_dataset
+LIMIT 100;
 ```
 
-👉 Remove apenas os registros filtrados
+Resultado: Foi criada uma tabela de testes contendo 100 clientes da base Olist.
 
 ---
 
-## ⚠️ Cuidados importantes
+## 2 - Inserir novos registros simulando novos clientes
 
-- Sempre utilize `WHERE` em UPDATE e DELETE  
-- Sem WHERE, todos os registros serão afetados  
-- Faça SELECT antes para validar a condição  
-- Evite executar comandos diretamente em produção sem teste  
-- Utilize subqueries para maior precisão em remoções  
+```sql
+INSERT INTO clientes_teste (
+    customer_id,
+    customer_city,
+    customer_state
+)
+VALUES
+(
+    'CLIENTE_TESTE_001',
+    'São Carlos',
+    'SP'
+);
+```
+
+Resultado: Um novo cliente foi inserido na tabela de testes.
 
 ---
 
-## Prática
+## 3 - Atualizar informações de registros existentes
 
+```sql
+UPDATE clientes_teste
+SET customer_city = 'Descalvado'
+WHERE customer_id = 'CLIENTE_TESTE_001';
+```
 
-Esses comandos são essenciais para manutenção e manipulação de bancos de dados no dia a dia.
+Resultado: A cidade do cliente foi alterada para Descalvado.
+
+---
+
+## 4 - Remover registros incorretos utilizando subquery
+
+```sql
+DELETE FROM clientes_teste
+WHERE customer_id IN
+(
+    SELECT customer_id
+    FROM
+    (
+        SELECT customer_id
+        FROM clientes_teste
+        WHERE customer_id = 'CLIENTE_TESTE_001'
+    ) AS subconsulta
+);
+```
+
+Resultado: O registro inserido para teste foi removido da tabela.
+
+---
+
+## Conclusão
+
+Nesta semana aprendemos os principais comandos de manipulação de dados em SQL. Utilizamos INSERT para adicionar registros, UPDATE para atualizar informações e DELETE para remover dados. Também reforçamos a importância do uso do WHERE para evitar alterações indesejadas e utilizamos uma subconsulta para remover registros de forma controlada.

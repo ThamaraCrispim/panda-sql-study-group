@@ -1,27 +1,16 @@
 # Semana 8 — Subconsultas (Subqueries)
 
-Nesta semana, vamos aprender a utilizar **subconsultas**, que são consultas dentro de outras consultas.
+Nesta semana, estudamos **Subconsultas (Subqueries)**, que são consultas SQL executadas dentro de outras consultas.
 
-As subqueries permitem criar análises mais avançadas, como:
-- Comparar valores com médias
-- Filtrar dados com base em outras consultas
-- Criar tabelas temporárias para análise
+As subqueries permitem criar análises mais avançadas, como comparar valores com médias, calcular participações percentuais e utilizar resultados intermediários como tabelas temporárias.
 
 ---
 
 ## Subquery no WHERE (IN, EXISTS)
 
-### 💡 Ideia principal
+Uma subconsulta pode ser utilizada para filtrar registros com base no resultado de outra consulta.
 
-Utilizar o resultado de uma consulta para filtrar outra.
-
----
-
-### IN
-
-O `IN` verifica se um valor está dentro do resultado de uma subconsulta.
-
-### Estrutura:
+### Exemplo
 
 ```sql
 SELECT *
@@ -32,75 +21,111 @@ WHERE coluna IN (
 );
 ```
 
-👉 Filtra registros com base em outra consulta
-
----
-
-### EXISTS
-
-O `EXISTS` verifica se a subconsulta retorna algum resultado.
-
-### Estrutura:
-
-```sql
-SELECT *
-FROM tabela t1
-WHERE EXISTS (
-    SELECT 1
-    FROM outra_tabela t2
-    WHERE t1.coluna = t2.coluna
-);
-```
-
-👉 Retorna verdadeiro se houver correspondência
-
 ---
 
 ## Subquery no SELECT
 
-Permite adicionar informações calculadas diretamente na consulta principal.
+Permite adicionar valores calculados diretamente no resultado da consulta.
 
-### Estrutura:
+### Exemplo
 
 ```sql
-SELECT coluna,
-       (SELECT função(coluna)
-        FROM outra_tabela) AS resultado
+SELECT
+    coluna,
+    (
+        SELECT AVG(coluna)
+        FROM tabela
+    ) AS media
 FROM tabela;
 ```
 
-👉 Adiciona um valor calculado como nova coluna
-
 ---
 
-## Subquery no FROM (Tabela derivada)
+## Subquery no FROM (Tabela Derivada)
 
-Permite usar o resultado de uma consulta como se fosse uma tabela.
+Permite utilizar uma consulta como uma tabela temporária.
 
-### Estrutura:
+### Exemplo
 
 ```sql
 SELECT *
 FROM (
-    SELECT coluna, função(coluna)
+    SELECT coluna
     FROM tabela
 ) AS subconsulta;
 ```
-
-👉 Cria uma "tabela temporária" para análise
-
----
-
-## ⚠️ Cuidados importantes
-
-- Subqueries podem impactar performance
-- Sempre use alias em subqueries no FROM
-- Prefira JOIN quando possível (em alguns casos é mais eficiente)
-- EXISTS pode ser mais performático que IN dependendo do caso
 
 ---
 
 ## Prática
 
+### 1 - Encontrar pedidos com valor acima da média de pagamentos
 
-Esses conceitos são fundamentais para resolver problemas mais complexos em SQL e construir análises completas.
+```sql
+SELECT
+    order_id,
+    payment_value
+FROM olist_order_payments_dataset
+WHERE payment_value >
+(
+    SELECT AVG(payment_value)
+    FROM olist_order_payments_dataset
+);
+```
+
+Resultado: A consulta retornou os pedidos cujo valor de pagamento é superior à média dos pagamentos registrados na base.
+
+![Resultado prática 1](COLE_AQUI_O_LINK_DA_IMAGEM)
+
+---
+
+### 2 - Calcular o total de vendas por produto e a porcentagem de participação de cada produto nas vendas
+
+```sql
+SELECT
+    product_id,
+    SUM(price) AS total_vendas,
+    ROUND(
+        SUM(price) * 100 /
+        (
+            SELECT SUM(price)
+            FROM olist_order_items_dataset
+        ),
+        2
+    ) AS participacao_percentual
+FROM olist_order_items_dataset
+GROUP BY product_id
+ORDER BY total_vendas DESC;
+```
+
+Resultado: A consulta calculou o valor total vendido por produto e sua participação percentual em relação ao faturamento total da base.
+
+![Resultado prática 2](COLE_AQUI_O_LINK_DA_IMAGEM)
+
+---
+
+### 3 - Utilizar uma subconsulta como tabela temporária para analisar vendas por produto
+
+```sql
+SELECT *
+FROM
+(
+    SELECT
+        product_id,
+        SUM(price) AS total_vendas
+    FROM olist_order_items_dataset
+    GROUP BY product_id
+) vendas
+WHERE total_vendas > 1000
+ORDER BY total_vendas DESC;
+```
+
+Resultado: Foi criada uma tabela derivada contendo o total vendido por produto. Em seguida, foram filtrados apenas os produtos com faturamento superior a R$ 1.000.
+
+![Resultado prática 3](COLE_AQUI_O_LINK_DA_IMAGEM)
+
+---
+
+## Conclusão
+
+Nesta atividade foram utilizadas subconsultas em diferentes contextos. As subqueries permitiram comparar pagamentos com a média da base, calcular a participação de cada produto no faturamento total e criar tabelas temporárias para análise. Esses recursos são amplamente utilizados em análises de dados e consultas SQL mais avançadas.

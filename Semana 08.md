@@ -115,8 +115,7 @@ ORDER BY total_vendas DESC;
 
 Resultado: A consulta calculou o valor total vendido por produto e a participação percentual de cada produto em relação ao faturamento total.
 
-![Resultado prática 2]([COLE_AQUI_SEU_PRINT](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/Semana%2008%20P2.png))
-
+![Resultado prática 3](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/Semana%2008%20P2.png)
 ---
 
 ## 3 - Utilizar uma subconsulta como tabela temporária para analisar pedidos ou pagamentos

@@ -90,7 +90,7 @@ WHERE payment_value >
 
 Resultado: A consulta retornou os pedidos cujo valor de pagamento é superior à média dos pagamentos registrados na base de dados.
 
-![Resultado prática 1](COLE_AQUI_SEU_PRINT)
+![Resultado prática 1](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/Semana%2008.png)
 
 ---
 

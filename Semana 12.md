@@ -55,7 +55,7 @@ LIMIT 10;
 
 ## Resultado
 
-(Adicionar print)
+![Resultado prática 1](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/pergunta%202.png)
 
 ## Insight
 
@@ -82,7 +82,7 @@ ORDER BY quantidade_produtos DESC;
 
 ## Resultado
 
-(Adicionar print)
+![Resultado prática 1]()
 
 ## Insight
 
@@ -110,7 +110,7 @@ LIMIT 10;
 
 ## Resultado
 
-(Adicionar print)
+![Resultado prática 1]()
 
 ## Insight
 
@@ -134,7 +134,7 @@ FROM olist_order_payments_dataset;
 
 ## Resultado
 
-(Adicionar print)
+![Resultado prática 1]()
 
 ## Insight
 
@@ -165,7 +165,7 @@ ORDER BY ticket_medio DESC;
 
 ## Resultado
 
-(Adicionar print)
+![Resultado prática 1]()
 
 ## Insight
 
@@ -194,7 +194,7 @@ ORDER BY faturamento DESC;
 
 ## Resultado
 
-(Adicionar print)
+![Resultado prática 1]()
 
 ## Insight
 
@@ -222,17 +222,12 @@ ORDER BY ano, mes;
 
 ## Resultado
 
-(Adicionar print)
-
+![Resultado prática 1]()
 ## Insight
 
 A análise permite identificar tendências de crescimento e possíveis sazonalidades.
 
----
 
-# Conclusão
-
-Através das consultas SQL foi possível transformar dados brutos em informações relevantes para o negócio. Foram identificados padrões de comportamento dos clientes, desempenho dos produtos e características das vendas.
 
 Essas análises demonstram como SQL pode ser utilizado para apoiar decisões estratégicas e gerar valor para empresas que trabalham com grandes volumes de dados.
 

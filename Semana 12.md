@@ -86,15 +86,15 @@ ORDER BY quantidade_produtos DESC;
 
 ## Insight
 
-Categorias com maior quantidade de produtos tendem a possuir maior variedade para os consumidores.
-
+As categorias cama, mesa e banho, esporte e lazer e móveis e decoração apresentam a maior quantidade de produtos cadastrados. 
+Esse resultado sugere que a Olist possui uma forte presença nesses segmentos, oferecendo uma ampla variedade de opções aos consumidores.
 ---
 
-# Análise 4 — Produtos mais vendidos
+# Análise 4 — Formas de Pagamento Mais Utilizadas
 
 ## Pergunta
 
-Quais produtos apresentam maior quantidade de vendas?
+Formas de Pagamento Mais Utilizadas
 
 ## Consulta SQL
 
@@ -114,7 +114,8 @@ LIMIT 10;
 
 ## Insight
 
-Os produtos mais vendidos podem servir como referência para estratégias de estoque e recomendações.
+O cartão de crédito foi a forma de pagamento mais utilizada pelos clientes, com 917 registros, seguido por boleto (241) e voucher (87). 
+Isso mostra uma forte preferência dos consumidores por pagamentos realizados via cartão de crédito.
 
 ---
 
@@ -138,11 +139,10 @@ FROM olist_order_payments_dataset;
 
 ## Insight
 
-O ticket médio ajuda a compreender o comportamento de compra dos clientes.
-
+A análise mostrou que o valor médio dos pagamentos é de R$ 154,53. Esse resultado fornece uma estimativa do ticket médio das compras realizadas na plataforma e ajuda a compreender o padrão de consumo dos clientes.
 ---
 
-# Análise 6 — Estados com maior ticket médio
+# Análise 6 — Quais estados possuem mais vendedores?
 
 ## Pergunta
 
@@ -152,24 +152,20 @@ Quais estados possuem o maior ticket médio?
 
 ```sql
 SELECT
-    c.customer_state,
-    ROUND(AVG(p.payment_value),2) AS ticket_medio
-FROM olist_customers_dataset c
-INNER JOIN olist_orders_dataset o
-    ON c.customer_id = o.customer_id
-INNER JOIN olist_order_payments_dataset p
-    ON o.order_id = p.order_id
-GROUP BY c.customer_state
-ORDER BY ticket_medio DESC;
+    seller_state,
+    COUNT(*) AS quantidade_vendedores
+FROM olist_sellers_dataset
+GROUP BY seller_state
+ORDER BY quantidade_vendedores DESC;
 ```
 
 ## Resultado
 
-![Resultado prática 6](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/Pergunta%206.png)
+![Resultado prática 6](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/pergunta%2006.novo.png)
+
 ## Insight
 
-Estados com ticket médio elevado representam mercados de maior valor para a empresa.
-
+São Paulo concentra a maior quantidade de vendedores cadastrados na plataforma. Isso sugere que boa parte da oferta de produtos está concentrada nesse estado.
 ---
 
 # Análise 7 — Categorias com maior faturamento
@@ -197,8 +193,8 @@ ORDER BY faturamento DESC;
 
 ## Insight
 
-A análise identifica quais categorias possuem maior impacto no faturamento da empresa.
-
+A categoria esporte e lazer apresentou o maior faturamento da análise, totalizando R$ 948,49. Em seguida aparecem cool stuff (R$ 814,89) e brinquedos (R$ 571,69).
+Esses resultados indicam que essas categorias possuem maior participação na receita gerada pelas vendas da plataforma.
 ---
 
 # Análise 8 — Evolução das vendas ao longo do tempo
@@ -225,9 +221,6 @@ ORDER BY ano, mes;
 
 ## Insight
 
-A análise permite identificar tendências de crescimento e possíveis sazonalidades.
+Foram identificados pedidos distribuídos entre os anos de 2017 e 2018. Os registros disponíveis mostram que houve pedidos em diferentes períodos ao longo do tempo, indicando atividade da plataforma durante os dois anos analisados.
 
-
-
-Essas análises demonstram como SQL pode ser utilizado para apoiar decisões estratégicas e gerar valor para empresas que trabalham com grandes volumes de dados.
 

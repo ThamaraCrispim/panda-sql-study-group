@@ -1,38 +1,58 @@
-# Semana 11 — Projeto Final (Parte 1)
+# Projeto Final — Análise de Dados do E-commerce Olist (Parte 1)
 
-## Introdução
+## Contexto do Projeto
 
-A Olist é uma plataforma brasileira de e-commerce que conecta vendedores e consumidores por meio de marketplaces digitais.
+A Olist é uma plataforma brasileira que conecta vendedores e consumidores através de diversos marketplaces.
 
-Com milhares de pedidos realizados em diferentes regiões do Brasil, a empresa possui uma grande quantidade de dados sobre clientes, produtos, vendas, pagamentos e entregas.
+Com milhares de pedidos realizados diariamente em diferentes regiões do Brasil, a empresa gera uma grande quantidade de dados sobre clientes, produtos, vendas e pagamentos.
 
-O principal desafio de uma empresa desse porte é transformar dados em informações que auxiliem a tomada de decisão.
-
-Neste projeto, o objetivo é explorar o banco de dados da Olist para entender melhor o comportamento dos clientes, o desempenho das vendas e as características dos produtos comercializados.
-
-A partir dessa análise, será possível identificar oportunidades de melhoria e gerar insights para apoiar decisões estratégicas do negócio.
+Neste projeto, o papel do analista de dados é transformar esses dados em informações úteis para apoiar decisões estratégicas da empresa.
 
 ---
 
-# Entendimento do Problema de Negócio
+## Problema de Negócio
 
-Imagine que você foi contratado como Analista de Dados da Olist.
+A diretoria da Olist deseja entender melhor o comportamento dos clientes e o desempenho das vendas para identificar oportunidades de crescimento.
 
-A diretoria deseja entender melhor:
+Algumas dúvidas importantes surgiram:
 
-* Quem são os clientes da empresa.
-* Quais produtos apresentam melhor desempenho.
-* Como as vendas estão distribuídas pelo Brasil.
-* Quais categorias possuem maior relevância para o negócio.
-* Como os pagamentos estão se comportando.
+* Quais regiões possuem mais clientes?
+* Quais categorias possuem melhor desempenho?
+* Quais produtos são mais vendidos?
+* Quais estados geram maior faturamento?
+* Como os pagamentos se comportam ao longo da base de clientes?
 
-Para responder essas perguntas, será necessário explorar o banco de dados e realizar análises utilizando SQL.
+Para responder essas perguntas, será realizada uma análise exploratória utilizando SQL sobre o banco de dados da Olist.
 
 ---
 
-# Exploração Inicial das Tabelas
+## Objetivo
 
-As principais tabelas utilizadas neste projeto são:
+O objetivo deste projeto é analisar os dados do e-commerce da Olist para gerar insights que auxiliem a empresa na tomada de decisões relacionadas a vendas, produtos e clientes.
+
+---
+
+## Base de Dados
+
+Foi utilizado o conjunto de dados público:
+
+**Brazilian E-Commerce Public Dataset by Olist**
+
+O banco contém informações sobre:
+
+* Clientes
+* Pedidos
+* Produtos
+* Pagamentos
+* Vendedores
+* Avaliações
+* Entregas
+
+---
+
+## Entendimento das Tabelas
+
+Antes de iniciar as análises, foi realizada uma exploração das principais tabelas do banco.
 
 ### Clientes
 
@@ -40,15 +60,11 @@ As principais tabelas utilizadas neste projeto são:
 DESCRIBE olist_customers_dataset;
 ```
 
----
-
 ### Pedidos
 
 ```sql
 DESCRIBE olist_orders_dataset;
 ```
-
----
 
 ### Produtos
 
@@ -56,15 +72,11 @@ DESCRIBE olist_orders_dataset;
 DESCRIBE olist_products_dataset;
 ```
 
----
-
 ### Pagamentos
 
 ```sql
 DESCRIBE olist_order_payments_dataset;
 ```
-
----
 
 ### Itens dos Pedidos
 
@@ -74,9 +86,9 @@ DESCRIBE olist_order_items_dataset;
 
 ---
 
-# Relacionamento Entre as Tabelas
+## Relacionamento entre as Tabelas
 
-O banco de dados pode ser representado da seguinte forma:
+O modelo de análise pode ser representado da seguinte forma:
 
 ```text
 Clientes
@@ -92,7 +104,7 @@ Pedidos
 Pagamentos
 ```
 
-Principais chaves:
+Principais chaves utilizadas:
 
 * customer_id
 * order_id
@@ -102,90 +114,58 @@ Principais chaves:
 
 # Perguntas de Negócio
 
-As perguntas abaixo serão respondidas na Semana 12 utilizando consultas SQL.
+Para responder ao problema apresentado pela diretoria, foram definidas as seguintes perguntas:
 
-## 1. Quais estados possuem a maior quantidade de clientes?
+### 1. Quais estados possuem mais clientes cadastrados?
 
-Objetivo:
-
-Identificar onde a Olist possui maior presença de clientes.
+Objetivo: Identificar os principais mercados consumidores da empresa.
 
 ---
 
-## 2. Quais cidades possuem mais clientes cadastrados?
+### 2. Quais cidades concentram o maior número de clientes?
 
-Objetivo:
-
-Entender a distribuição geográfica da base de clientes.
+Objetivo: Entender a distribuição geográfica dos consumidores.
 
 ---
 
-## 3. Quais categorias possuem mais produtos cadastrados?
+### 3. Quais categorias possuem mais produtos cadastrados?
 
-Objetivo:
-
-Identificar as categorias com maior variedade de produtos.
+Objetivo: Identificar os segmentos mais representativos da plataforma.
 
 ---
 
-## 4. Quais produtos apresentam maior quantidade de vendas?
+### 4. Quais produtos apresentam maior volume de vendas?
 
-Objetivo:
-
-Descobrir os produtos mais populares da plataforma.
+Objetivo: Descobrir os produtos mais populares entre os clientes.
 
 ---
 
-## 5. Qual é o valor médio dos pagamentos realizados?
+### 5. Qual é o valor médio dos pagamentos realizados?
 
-Objetivo:
-
-Entender o comportamento geral dos pagamentos.
+Objetivo: Compreender o comportamento geral das compras.
 
 ---
 
-## 6. Quais estados possuem o maior ticket médio de compra?
+### 6. Quais estados possuem o maior ticket médio?
 
-Objetivo:
-
-Identificar regiões que geram maior receita por cliente.
+Objetivo: Identificar regiões com maior potencial de faturamento.
 
 ---
 
-## 7. Quais categorias geram maior faturamento?
+### 7. Quais categorias geram mais receita?
 
-Objetivo:
-
-Identificar os segmentos mais importantes para o negócio.
+Objetivo: Identificar quais segmentos mais contribuem para o faturamento da empresa.
 
 ---
 
-## 8. Quais meses apresentaram maior volume de vendas?
+### 8. Como as vendas se comportam ao longo do tempo?
 
-Objetivo:
-
-Identificar possíveis sazonalidades no e-commerce.
+Objetivo: Identificar tendências e possíveis sazonalidades.
 
 ---
 
-## 9. Quais clientes realizaram mais pedidos?
+## Próximos Passos
 
-Objetivo:
+Na Parte 2 do projeto serão desenvolvidas consultas SQL para responder cada uma das perguntas de negócio apresentadas neste documento.
 
-Identificar clientes com maior recorrência de compra.
-
----
-
-## 10. Quais categorias possuem maior preço médio dos produtos?
-
-Objetivo:
-
-Entender quais segmentos possuem produtos de maior valor agregado.
-
----
-
-# Planejamento da Semana 12
-
-Na próxima etapa serão desenvolvidas consultas SQL para responder cada uma das perguntas de negócio apresentadas neste documento.
-
-Além das consultas, serão gerados insights e interpretações dos resultados encontrados para apoiar a tomada de decisão.
+Além das consultas, serão gerados insights e conclusões para apoiar a tomada de decisão da empresa.

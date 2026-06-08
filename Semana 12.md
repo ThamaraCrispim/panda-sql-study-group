@@ -31,8 +31,9 @@ ORDER BY quantidade_clientes DESC;
 
 ## Insight
 
-A análise mostra que São Paulo é o estado com mais clientes cadastrados na plataforma, seguido por Rio de Janeiro e Minas Gerais. Os resultados indicam uma forte concentração de clientes na região Sudeste, que representa uma parcela importante da base de consumidores da Olist.
----
+
+A análise mostra que São Paulo é o estado com mais clientes cadastrados na plataforma, seguido por Rio de Janeiro e Minas Gerais. 
+Os resultados indicam uma forte concentração de clientes na região Sudeste, que representa uma parcela importante da base de consumidores da Olist.
 
 # Análise 2 — Cidades com mais clientes
 

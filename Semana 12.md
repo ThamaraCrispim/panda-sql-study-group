@@ -59,8 +59,8 @@ LIMIT 10;
 
 ## Insight
 
-A análise permite identificar os principais centros consumidores da plataforma.
-
+A cidade de São Paulo concentra o maior número de clientes da plataforma, seguida por Rio de Janeiro e Belo Horizonte.
+Isso indica que os grandes centros urbanos possuem uma participação importante na base de clientes da Olist.
 ---
 
 # Análise 3 — Categorias com mais produtos
@@ -82,7 +82,7 @@ ORDER BY quantidade_produtos DESC;
 
 ## Resultado
 
-![Resultado prática 1]()
+![Resultado prática 1](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/Pergunta%203.png)
 
 ## Insight
 
@@ -110,7 +110,7 @@ LIMIT 10;
 
 ## Resultado
 
-![Resultado prática 1]()
+![Resultado prática 1](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/pergunta%204.png)
 
 ## Insight
 
@@ -134,7 +134,7 @@ FROM olist_order_payments_dataset;
 
 ## Resultado
 
-![Resultado prática 1]()
+![Resultado prática 1](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/pergunta%205.png)
 
 ## Insight
 
@@ -165,8 +165,7 @@ ORDER BY ticket_medio DESC;
 
 ## Resultado
 
-![Resultado prática 1]()
-
+![Resultado prática 6](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/Pergunta%206.png)
 ## Insight
 
 Estados com ticket médio elevado representam mercados de maior valor para a empresa.
@@ -194,7 +193,7 @@ ORDER BY faturamento DESC;
 
 ## Resultado
 
-![Resultado prática 1]()
+![Resultado prática 1](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/pergunta%207.png)
 
 ## Insight
 
@@ -222,7 +221,8 @@ ORDER BY ano, mes;
 
 ## Resultado
 
-![Resultado prática 1]()
+![Resultado prática 1](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/pergunta%208.png)
+
 ## Insight
 
 A análise permite identificar tendências de crescimento e possíveis sazonalidades.

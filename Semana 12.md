@@ -27,7 +27,7 @@ ORDER BY quantidade_clientes DESC;
 
 ## Resultado
 
-(Adicionar print)
+![Resultado prática 1](https://github.com/ThamaraCrispim/panda-sql-study-group/blob/main/Imagem/Captura%20de%20tela%202026-06-08%20103701.png)
 
 ## Insight
 

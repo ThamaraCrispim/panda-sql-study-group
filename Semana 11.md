@@ -18,8 +18,8 @@ Algumas dúvidas importantes surgiram:
 
 * Quais regiões possuem mais clientes?
 * Quais categorias possuem melhor desempenho?
-* Quais produtos são mais vendidos?
-* Quais estados geram maior faturamento?
+* Formas de Pagamento Mais Utilizadas
+* Quais estados possuem mais vendedores
 * Como os pagamentos se comportam ao longo da base de clientes?
 
 Para responder essas perguntas, será realizada uma análise exploratória utilizando SQL sobre o banco de dados da Olist.

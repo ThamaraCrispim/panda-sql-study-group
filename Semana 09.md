@@ -37,7 +37,6 @@ VALUES (
 
 Resultado: Um novo cliente é inserido na tabela.
 
----
 
 ## UPDATE
 
